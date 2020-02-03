@@ -1,0 +1,9 @@
+- name: Remove Bond
+  vars:
+    lines: 'delete interfaces bonding bond0
+
+      delete interfaces bonding bond1
+
+      '
+  ansible.netcommon.cli_config:
+    config: '{{ lines }}'
